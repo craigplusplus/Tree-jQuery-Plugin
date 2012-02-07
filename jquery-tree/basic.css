@@ -1,0 +1,104 @@
+/* Stylesheet for a list-based family tree */
+
+body {
+	background-color: #EEFFFF;
+}
+
+ul.family {
+	margin: 0; 
+	padding: 0;
+	line-height: 15px;		/* Set to standard bullet's height */
+	font-size: 13px;		/* Set to standard bullet's height - 2 */
+}
+	
+ul.family li {
+	list-style: none;
+	margin: 0px;
+	padding: 0px 0px 0px 29px;	/* Set to standard bullet's width + 5 */
+	vertical-align: middle;
+	width: 10em;			/* Names running longer than this will be wrapped */
+}
+		
+ul.family ul.partners, 
+ul.family ul.partners > li {
+	padding: 0px;		
+	margin-left: 0px;		
+}
+
+ul.family ul.partners > li {
+	padding: 9px 0px 0px;
+	background-image: url(images/childless-root.png);
+	background-position: 0px 0px;	/* This background position must be specified in px. See js file. */
+	background-repeat: no-repeat;
+	min-height: 22px;  /* Must be at least tall enough to include the top and bottom breaks of multiple-partners.png */
+}
+
+/* Partners - of - partners may be included, but must be indented */
+ul.family ul.partners > li > ul.partners {
+	margin-left: 5px;		/* The width of childless-root */
+}
+
+
+
+ul.family ul.partners > li:not(.has-children) {
+	padding: 9px 0px 9px;
+}
+
+ul.family ul.partners > li.has-children {
+	/* Nuclear-root's position must be specified in px. See js file. */
+	background-image: url(images/nuclear-root.png), url(images/line.png);
+	background-position: 0px 0px, right 4px;
+	background-repeat: no-repeat, repeat-y;
+	
+	/* 	This hack is to make the junction between nuclear-root.png and line.png
+		a right angle turn rather than an intersection. */
+	border-radius: 		0px 8px 0px 0px; /* Set top-right radius to ul.partners > li padding-top - 1 */
+	-moz-border-radius: 	0px 8px 0px 0px;
+	-webkit-border-radius: 	0px 8px 0px 0px;
+	-o-border-radius:	0px 8px 0px 0px;
+	
+	
+}
+
+ul.family ul:not(.partners) > li > ul.children,
+ul.family > li > ul.children {
+	background-image: url(images/single-parent-root.png);
+	background-position: 0px 0px; /* Nuclear-root's position must be specified in px. See js file. */
+	background-repeat: no-repeat;
+}	
+ul.family ul:not(.partners) > li > ul.children > li:first-child,
+ul.family > li > ul.children > li:first-child {
+	/* 	This hack is to make the junction between nuclear-root.png and line.png
+		a right angle turn rather than an intersection. */
+	border-radius: 		8px 0px 0px 0px; /* Set top-left radius to ul.partners > li padding-top - 1 */
+	-moz-border-radius: 	8px 0px 0px 0px;
+	-webkit-border-radius: 	8px 0px 0px 0px;
+	-o-border-radius:	8px 0px 0px 0px;
+}
+
+ul.family ul.children, 
+ul.family ul.creations {
+	padding-left: 10em;		/* Match "ul.family li" width above */
+	margin-left: -1px;	
+}
+
+ul.family ul.children > li {
+	background-color: #EEFFFF;	/* Set to page's background color */
+	background-image: url(images/child.png), url(images/line.png);
+	background-position: top left, top left;
+	background-repeat: no-repeat, repeat-y;
+}
+	
+ul.family ul.children > li:last-child {
+	background-image: url(images/last-child.png);
+	background-position: top left;
+	background-repeat: no-repeat;
+}
+	
+ul.family ul.created > li, li.created {
+	color: #00AA44;
+}
+
+ul.family ul.adopted > li, li.adopted {
+	color: #888888;
+}

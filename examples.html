@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>TEST FAMILY TREE</title>
+<link href='jquery-tree/basic.css' type="text/css" rel='stylesheet' />
+<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js'></script>
+<script type='text/javascript' src='jquery-tree/jquery.bgimages.js'></script>
+<script type='text/javascript' src='jquery-tree/jquery.tree.js'></script>
+<script type='text/javascript'>
+$(document).ready(function(){
+	$('ul.family').familyTree({bg_color: '#EEFFFF'});
+});
+</script>
+</head>
+
+
+<body>
+
+<h2>Legend</h2>
+<ul class='family'>
+	<li>Parent 1
+		<ul class='partners'>
+			<li>Parent 2
+				<ul class='children'>
+					<li>Birth Child</li>
+					<li class='adopted'>Adopted Child</li>
+					<li class='created'>Creation</li>
+				</ul>
+			</li>
+			<li>Parent 3</li>
+			<li>Parent 4</li>
+		</ul>	
+	</li>
+</ul>
+
+<h2>Godwin</h2>
+
+<ul class='family'>
+	<li>William Godwin
+		<ul class='partners'>
+			<li>Mary Wollstonecraft
+				<ul class='children'>
+					<li>Mary Wollstonecraft Godwin
+						<ul class='partners'>
+							<li>Percy Bysshe Shelley
+								<ul class='children'>
+									<li>Clara</li><li>William</li><li>Clara Everina</li><li>Percy Florence</li>
+								</ul>
+								<ul class='partners'>
+									<li>Harriet Westbrooke
+										<ul class='children'>
+											<li>Charles</li><li>Lanthe</li>
+										</ul>
+									</li>
+									<li>Test<ul class='children'><li>test</li></ul></li>
+									<li>Test<ul class='children'><li>test</li></ul></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<ul class='partners'>
+					<li>Gilber Imlay
+						<ul class='children'>
+							<li>Fanny Imlay</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li>Mary Jane Vial
+				<ul class='children'>
+					<li>William Godwin Jr.</li>
+				</ul>
+				<ul class='children'>
+					<li>Mary Jane (Claire) Clairmont
+						<ul class='partners'>
+							<li>Lord Byron
+								<ul class='children'>
+									<li>Allegra</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</li>
+</ul>
+
+<h2>Simpsons</h2>
+
+<h3>Simspon Family</h3>
+
+<ul class='family'>
+	<li>Abraham J. "Grandpa" Simpson
+		<ul class='partners'>
+			<li>????? ?????
+				<ul class='children'>
+					<li>Herbert "Herb" Powell</li>
+				</ul>
+			</li>
+			<li>Mona Penelope Simpson (née Olsen)
+				<ul class='children'>
+					<li>Homer Jay Simpson
+						<ul class='partners'>
+							<li id='marge_simpson'>Marjorie "Marge" Simpson (née <a href='#marge_bouvier'>Bouvier</a>)
+								<ul class='children'>
+									<li>Bartholomew "Bart" JoJo Simpson</li>
+									<li>Lisa Marie Simpson</li>
+									<li>Margaret "Maggie" Eve Simpson</li>
+								</ul>
+							</li>
+							<li id='amber_homer_simpson'>Amber Simpson
+								<sub><a href='#amber_abraham_simpson'>[2]</a></sub>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li id='amber_abraham_simpson'>Amber Simpson
+				<sub><a href='#amber_homer_simpson'>[1]</a></sub>
+			</li>
+		</ul>
+	</li>
+</ul>
+
+<h3>Bouvier Family</h3>
+
+<ul class='family'>
+	<li>Clancy Bouvier
+		<ul class='partners'>
+			<li id='jackie_bouvier'>Jacqueline Ingrid Bouvier (née <a href='jackie_gurney'>Gurney</a>)
+				<ul class='children'>
+					<li>Patty Bouvier</li>
+					<li>Selma Bouvier
+						<ul class='children'>
+							<li>Ling Bouvier</li>
+						</ul>
+					</li>
+					<li id='marge_bouvier'>Marjorie "Marge" <a href='#marge_simpson'>Simpson</a> (née Bouvier)</li>
+				</ul>
+			</li>
+		</ul>
+	</li>
+</ul>		
+
+<h3>Gurney Family</h3>
+
+<ul class='family'>
+	<li>????? Gurney
+		<ul class='children'>
+			<li>Gladys Gurney</li>
+			<li id='jackie_gurney'>Jacqueline Ingrid <a href='#jackie_bouvier'>Bouvier</a> (née Gurney)</li>
+		</ul>
+	</li>
+</ul>
+
+
+
+</body>
+</html>
