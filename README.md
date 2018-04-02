@@ -63,7 +63,7 @@ This shows that individuals can have multiple partners. Further, those partners 
 
 Note also the case of Mary Jane Vial. She has two sets of children; one born to William Godwin, and her own, to which she was initially a single mother (These children were born to Sir John Lethbridge out of wedlock; I could have included him, but wanted to demonstrate a coupling with a single parent). This is handled through the use of two "children" lists. In such cases, the second list is portrayed as the individual's sole children. Here's the relevant code:
 
-  <ul class='family'> 
+    <ul class='family'> 
     <li>
       William Godwin 
       ... snip ... 
@@ -85,7 +85,7 @@ Note also the case of Mary Jane Vial. She has two sets of children; one born to 
         </ul> 
       </li> 
     </li> 
-  </ul>
+    </ul>
   
 ### Example 3: Family Mergers ###
 
