@@ -1,4 +1,4 @@
-# Tree jQuery Plugin #
+# Tree jQuery Plugin -- OBSOLETE #
 
 jQuery plugin to aide in the presentation of semantically meaningful tree data in HTML.
 
